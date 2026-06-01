@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class AiProperties {
 
-    private String provider = "gemini";
+    private String provider;
     private final Gemini gemini = new Gemini();
 
     public String getProvider() {
@@ -28,9 +28,9 @@ public class AiProperties {
     public static class Gemini {
 
         private String apiKey;
-        private String model = "gemini-2.0-flash";
-        private List<String> fallbackModels = new ArrayList<>(List.of("gemini-2.0-flash"));
-        private String baseUrl = "https://generativelanguage.googleapis.com/v1beta/models";
+        private String model;
+        private List<String> fallbackModels;
+        private String baseUrl;
 
         public String getApiKey() {
             return apiKey;
